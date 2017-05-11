@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: self_destruction
+  username: zdubzdab
+  password: password
+  host: localhost
