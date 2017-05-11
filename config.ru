@@ -1,2 +1,2 @@
-require './app'
+require './self_destruction'
 run Sinatra::Application
