@@ -9,9 +9,9 @@ class SelfDestructionController < ApplicationController
   post '/submit' do
     @message = Message.new(params[:message])
     if @message.save
-      redirect '/messages'
+      redirect '/', flash[:notice] = "Message was successfully created"
     else
-      "Sorry, there was an error!"
+      redirect :new, flash[:error] = "Text of message can't be blank"
     end
   end
 

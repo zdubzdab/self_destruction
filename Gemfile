@@ -6,6 +6,8 @@ gem "sinatra-activerecord"
 gem "pg"
 gem "slim"
 gem "sinatra-twitter-bootstrap", require: "sinatra/twitter-bootstrap"
+gem 'sinatra-flash'
+gem 'sinatra-redirect-with-flash'
 
 group :development, :test do
   gem "pry"

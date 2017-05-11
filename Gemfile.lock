@@ -46,6 +46,10 @@ GEM
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
+    sinatra-redirect-with-flash (0.2.1)
+      sinatra (>= 1.0.0)
     sinatra-twitter-bootstrap (2.3.4)
     slim (3.0.7)
       temple (~> 0.7.6)
@@ -71,6 +75,8 @@ DEPENDENCIES
   pry
   sinatra
   sinatra-activerecord
+  sinatra-flash
+  sinatra-redirect-with-flash
   sinatra-twitter-bootstrap
   slim
   tux
