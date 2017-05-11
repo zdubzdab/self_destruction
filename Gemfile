@@ -6,3 +6,6 @@ gem "sinatra-activerecord"
 gem "pg"
 gem "slim"
 gem "sinatra-twitter-bootstrap", require: "sinatra/twitter-bootstrap"
+group :development, :test do
+  gem 'pry'
+end
