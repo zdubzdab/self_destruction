@@ -1,5 +1,8 @@
-.col-md-2
-  p Yey!
+.col-md-12
+  h3 All Messages
+  ul
+  - @messages.each do |message|
+    li
+      = message.text 
 
-.container
-  h3 dddd
+  a href="/new" Create new message

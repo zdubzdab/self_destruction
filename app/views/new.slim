@@ -1,0 +1,11 @@
+.col-md-12
+  h3 Create message
+
+form action="/submit" method="POST"
+  .form-group
+    p 
+      b Text:
+    input type="textarea" name="message[text]" class='form-control'
+    input type="submit" value="Submit" class="btn btn-info"
+
+a href="/" Back
