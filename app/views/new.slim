@@ -1,11 +1,21 @@
-.col-md-12
+.span3
+.span6
   h3 Create message
 
-form action="/submit" method="POST"
-  .form-group
-    p 
-      b Text:
-    input type="textarea" name="message[text]" class='form-control'
-    input type="submit" value="Submit" class="btn btn-info"
+  form action="/submit" method="POST"
+    p If you don't choose 'Destroy this message about one hour'
+      this message will be destroyed if somebody visits link that leads to it
+    .form-group
+      label for="message[text]" Text:
+      input type="textarea" name="message[text]" class='form-control'
 
-a href="/" Back
+    .form-group
+      br
+      label for="message[destroy_one_hour]" Destroy this message about one hour:
+      input type="checkbox" name="message[destroy_one_hour]" class='form-control'
+    .form-group
+      br
+      input type="submit" value="Submit" class="btn btn-info"
+      
+.span6
+  a href="/" Back
