@@ -5,6 +5,7 @@ require 'sinatra/twitter-bootstrap'
 require 'pry'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
+require 'aescrypt'
 
 require './config/environments'
 require './app/models/message'

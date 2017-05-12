@@ -8,6 +8,7 @@ gem "slim"
 gem "sinatra-twitter-bootstrap", require: "sinatra/twitter-bootstrap"
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
+gem 'aescrypt'
 
 group :development, :test do
   gem "pry"
