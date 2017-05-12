@@ -18,4 +18,9 @@ class SelfDestructionController < ApplicationController
   get '/new' do
     slim :new
   end
+
+  get '/messages/:id' do
+    @message = Message.find(params[:id])
+    slim :show
+  end
 end

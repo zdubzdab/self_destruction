@@ -3,6 +3,7 @@
   ul
   - @messages.each do |message|
     li
-      = message.text 
+      = message.text
+      a href="/messages/#{message.id}" #{message.text}
 
   a href="/new" Create new message
