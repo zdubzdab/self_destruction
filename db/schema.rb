@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511135656) do
+ActiveRecord::Schema.define(version: 20170512103950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "messages", force: :cascade do |t|
-    t.text "text"
+    t.text   "text"
+    t.string "key"
+    t.index ["key"], name: "index_messages_on_key", using: :btree
   end
 
 end

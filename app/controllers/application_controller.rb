@@ -1,3 +1,15 @@
+require 'sinatra'
+require 'sinatra/activerecord'
+require 'slim'
+require 'sinatra/twitter-bootstrap'
+require 'pry'
+require 'sinatra/flash'
+require 'sinatra/redirect_with_flash'
+
+require './config/environments'
+require './app/models/message'
+require './app/helpers/application_helpers'
+
 class ApplicationController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
   helpers ApplicationHelpers
