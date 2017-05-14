@@ -23,4 +23,17 @@ class SelfDestructionController < ApplicationController
     @message = Message.find_by_key(params[:key])
     slim :show
   end
+
+  after '/messages/:key' do |key|
+    message = Message.find_by_key(key)
+    unless message.destroy_one_hour
+      destroy_message_after_visit_link(message)
+    end
+  end
+
+  private
+
+  def destroy_message_after_visit_link(message)
+    message.destroy
+  end
 end
