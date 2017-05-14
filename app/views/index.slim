@@ -1,8 +1,9 @@
-.col-md-12
+.span5
+.span6
   h3 All Messages
-  ul
+  ul.ul_list_style
   - @messages.each do |message|
     li
       a href="/messages/#{message.key}" #{message.key}
 
-  a href="/new" Create new message
+a href="/new" Create new message
