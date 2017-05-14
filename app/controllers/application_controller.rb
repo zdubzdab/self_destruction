@@ -6,10 +6,12 @@ require 'pry'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'aescrypt'
+require 'sucker_punch'
 
 require './config/environments'
 require './app/models/message'
 require './app/helpers/application_helpers'
+require './app/jobs/destroy_in_one_hour_job'
 
 class ApplicationController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
