@@ -17,3 +17,10 @@ group :development, :test do
 end
 
 gem "tux", group: :development
+
+group :test do
+  gem "rspec"
+  gem "rack-test"
+  gem "capybara"
+  gem 'shoulda-matchers'
+end
