@@ -21,7 +21,8 @@ class SelfDestructionController < ApplicationController
 
   get '/messages/:key' do
     @message = Message.find_by_key(params[:key])
-    slim :show
+      count_number_of_visits(@message) if @message.destroy_one_hour
+      slim :show
   end
 
   after '/messages/:key' do |key|
@@ -35,5 +36,11 @@ class SelfDestructionController < ApplicationController
 
   def destroy_message_after_visit_link(message)
     message.destroy
+    # redirect '/', flash[:notice] = "Message with key #{message.key}" +
+    #   " was successfully destroyed because it you read it"
+  end
+
+  def count_number_of_visits(message)
+    message.update_attribute('count_view', message.count_view + 1)
   end
 end

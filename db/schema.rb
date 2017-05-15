@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512125812) do
+ActiveRecord::Schema.define(version: 20170515142803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170512125812) do
     t.text    "text"
     t.string  "key"
     t.boolean "destroy_one_hour", default: false
+    t.integer "count_view",       default: 0
     t.index ["key"], name: "index_messages_on_key", using: :btree
   end
 
