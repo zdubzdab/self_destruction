@@ -7,6 +7,7 @@ require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'aescrypt'
 require 'sucker_punch'
+require 'active_support/inflector'
 
 require './config/environments'
 require './app/models/message'

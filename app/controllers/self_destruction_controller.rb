@@ -36,8 +36,6 @@ class SelfDestructionController < ApplicationController
 
   def destroy_message_after_visit_link(message)
     message.destroy
-    # redirect '/', flash[:notice] = "Message with key #{message.key}" +
-    #   " was successfully destroyed because it you read it"
   end
 
   def count_number_of_visits(message)

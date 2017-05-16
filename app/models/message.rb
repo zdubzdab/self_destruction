@@ -15,6 +15,6 @@ class Message < ActiveRecord::Base
   end
 
   def destroy_mes_in_one_hour
-    DestroyInOneHourJob.perform_in(10, self)
+    DestroyInOneHourJob.perform_in(3600, self)
   end
 end

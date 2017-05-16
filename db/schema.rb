@@ -16,10 +16,12 @@ ActiveRecord::Schema.define(version: 20170515142803) do
   enable_extension "plpgsql"
 
   create_table "messages", force: :cascade do |t|
-    t.text    "text"
-    t.string  "key"
-    t.boolean "destroy_one_hour", default: false
-    t.integer "count_view",       default: 0
+    t.text     "text"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "key"
+    t.boolean  "destroy_one_hour", default: false
+    t.integer  "count_view",       default: 0
     t.index ["key"], name: "index_messages_on_key", using: :btree
   end
 

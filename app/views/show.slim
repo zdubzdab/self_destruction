@@ -5,3 +5,17 @@
   br
   br
   a href="/" Back
+
+p
+  | The message was created at: 
+  = time_fomat(@message.created_at)
+- if @message.destroy_one_hour
+  = @message.count_view
+  = pluralize_if_necessary(' person', @message.count_view)
+  |  read this message(including you)
+  br
+  | The message will be destroyed at: 
+  = time_of_message_destruction(@message.created_at)
+- else
+  | The message exist during: 
+  = time_of_message_existence(@message.created_at)
