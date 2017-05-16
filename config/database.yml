@@ -6,3 +6,17 @@ development:
   pool: 5
   username: user
   password: password
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: self_destruction_test
+  pool: 5
+  username: user
+  password: password
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: self_destruction_production
+  pool: 5
+  username: user
+  password: password
