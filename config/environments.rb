@@ -5,7 +5,7 @@ configure :production, :development do
       :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
       :host     => db.host,
       :username => 'zdubzdab',
-      :password => 'password',
+      :password => 'y.128905',
       :database => db.path[1..-1],
       :encoding => 'utf8'
   )
