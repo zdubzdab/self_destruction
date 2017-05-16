@@ -1,6 +1,8 @@
 development:
   adapter: postgresql
+  encoding: unicode
   database: self_destruction
-  username: zdubzdab
-  password: password
   host: localhost
+  pool: 5
+  username: user
+  password: password
