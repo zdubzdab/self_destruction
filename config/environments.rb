@@ -4,7 +4,7 @@ configure :production, :development do
   ActiveRecord::Base.establish_connection(
       :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
       :host     => db.host,
-      :username => 'user',
+      :username => 'pg_user',
       :password => 'password',
       :database => db.path[1..-1],
       :encoding => 'utf8'

@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  username: user
+  username: pg_user
   password: password
   database: self_destruction
 
