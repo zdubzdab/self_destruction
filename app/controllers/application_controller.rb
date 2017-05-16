@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'slim'
 require 'sinatra/twitter-bootstrap'
-require 'pry'
+require 'pry' if development?
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'aescrypt'
