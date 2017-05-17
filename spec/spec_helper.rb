@@ -6,18 +6,12 @@ require 'aescrypt'
 require 'pry'
 require 'sucker_punch/testing/inline'
 require 'slim'
-# require 'capybara/rspec'
-
-include Rack::Test::Methods
-
-def app
-  Sinatra::Application 
-end
+require 'capybara/rspec'
 
 RSpec.configure do |config|
 
-  # config.include Capybara::DSL, feature: true
-  # config.include Capybara::RSpecMatchers, feature: true
+  config.include Capybara::DSL, feature: true
+  config.include Capybara::RSpecMatchers, feature: true
 
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)

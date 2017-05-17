@@ -4,6 +4,6 @@
   ul
   - @messages.each do |message|
     li style="list-style-type:none;"
-      a href="/messages/#{message.key}" #{message.key}
+      a class="show_link" href="/messages/#{message.key}" #{message.key}
 .span2
   a href="/new" Create new message

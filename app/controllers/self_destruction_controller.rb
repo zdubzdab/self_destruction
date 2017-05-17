@@ -2,7 +2,7 @@ require './app/controllers/application_controller'
 
 class SelfDestructionController < ApplicationController
   get '/' do
-    @messages = Message.all
+    @messages = Message.all.order("created_at DESC")
     slim :index
   end
 
