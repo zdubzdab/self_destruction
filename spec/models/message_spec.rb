@@ -1,6 +1,5 @@
 require 'spec_helper.rb'
 require './app/models/message.rb'
-require 'aescrypt'
 
 RSpec.describe Message, type: :model do
 

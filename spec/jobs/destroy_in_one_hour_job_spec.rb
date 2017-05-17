@@ -1,14 +1,15 @@
 require 'spec_helper.rb'
 require './app/jobs/destroy_in_one_hour_job.rb'
+require './app/models/message.rb'
 
-describe ApplicationHelpers do
-  include ApplicationHelpers
+describe DestroyInOneHourJob do
 
-  describe "decrypt_text method" do
-    it "decrypted text should equal typed text" do
-      encrypted_text = AESCrypt.encrypt('text', 'password')
-
-      expect(decrypt_text(encrypted_text)).to eq('text')
+  describe "perform method" do
+    it "delete message" do
+      message = Message.create!(text: "John", destroy_one_hour: false)
+      expect {
+        DestroyInOneHourJob.new.perform(message)
+      }.to change(Message, :count).by(-1)
     end
   end
 end

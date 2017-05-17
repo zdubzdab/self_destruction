@@ -21,4 +21,4 @@
     |  read this message(including you)
   - else
     | The message exist during: 
-    = time_of_message_existence(@message.created_at)
+    = time_of_message_existence(Time.now, @message.created_at)
