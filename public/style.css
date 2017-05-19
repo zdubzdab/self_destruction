@@ -1,4 +1,4 @@
-.ul_list_style {
-  list-style-type:none;
-  padding-left: 10px;
+#shift_10px {
+  position: relative;
+  top: 10px;
 }
