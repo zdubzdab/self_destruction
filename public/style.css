@@ -1,4 +1,28 @@
-#shift_10px {
-  position: relative;
-  top: 10px;
+#header {
+  background: aliceblue !important;
+  margin-left: 80px !important;
+  margin-bottom: 20px;
+}
+
+#header > p {
+  font-size: 2.2em;
+  color: #0099cc;
+  font-weight: bold;
+  margin-left: 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#notice {
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+}
+
+#layout {
+  margin-top: 20px;
+}
+
+li {
+  list-style-type:none;
 }

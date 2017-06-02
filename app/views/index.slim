@@ -1,9 +1,9 @@
 .span2
-.span6#shift_10px
+.span6
   h3 All Messages
   ul
   - @messages.each do |message|
-    li style="list-style-type:none;"
+    li
       a class="show_link" href="/messages/#{message.key}" #{message.key}
 .span2
   a href="/new" Create new message
